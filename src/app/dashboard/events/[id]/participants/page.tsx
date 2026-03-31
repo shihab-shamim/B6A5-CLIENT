@@ -12,13 +12,15 @@ export default function EventParticipantsPage() {
   const params = useParams();
   const eventId = params.id as string;
   const router = useRouter();
-  
+
 
   const [participants, setParticipants] = useState<any[]>([]);
   const [event, setEvent] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [inviteEmail, setInviteEmail] = useState("");
   const [inviting, setInviting] = useState(false);
+
+  
 
   useEffect(() => {
     fetchData();
