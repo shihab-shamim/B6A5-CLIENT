@@ -5,6 +5,7 @@ import api from "@/lib/api";
 import { Trash2, ShieldCheck, Users, CalendarDays, Loader2, AlertTriangle, CheckCircle } from "lucide-react";
 import toast from "react-hot-toast";
 
+
 export default function AdminDashboard() {
   const [users, setUsers] = useState<any[]>([]);
   const [events, setEvents] = useState<any[]>([]);
