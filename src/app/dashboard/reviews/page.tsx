@@ -21,6 +21,8 @@ export default function MyReviewsPage() {
     fetchMyReviews();
   }, [user]);
 
+  
+
   const fetchMyReviews = async () => {
     try {
       if (!user) return;
