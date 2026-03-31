@@ -7,6 +7,7 @@ import { Save, Ban, Loader2, DollarSign, MapPin, AlignLeft, Calendar as Calendar
 import toast from "react-hot-toast";
 import Link from "next/link";
 
+
 export default function CreateEventPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
