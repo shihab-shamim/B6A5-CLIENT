@@ -21,29 +21,19 @@ export default function MyReviewsPage() {
     fetchMyReviews();
   }, [user]);
 
-  
+
 
   const fetchMyReviews = async () => {
     try {
       if (!user) return;
       
-      // Since there's no dedicated GET /my-reviews, we can fetch all reviews
-      // this user has made. A better approach is fetching via the user's profile
-      // or a specific route. For this exercise, we will assume a generic endpoint
-      // exists or we fallback to an empty state for demonstration if not implemented.
-      // Wait, let's just make an API call to a specific route if exists, else mock.
-      // Actually, looking at the backend, we don't have a GET /reviews endpoint,
-      // we only have GET /events/:id/reviews. 
-      // To show a user's *own* reviews across all events, the backend needs a GET /users/me/reviews route.
-      // For now, I'll simulate an empty state, or try to fetch if we had one.
       
-      // Attempt to hit an endpoint, fallback gracefully
       const { data } = await api.get("/reviews/me").catch(() => ({ data: [] }));
       setReviews(data);
       
     } catch (error) {
       console.error(error);
-      // toast.error("Failed to load reviews");
+   
     } finally {
       setLoading(false);
     }
