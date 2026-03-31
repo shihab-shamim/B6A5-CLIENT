@@ -33,7 +33,7 @@ export default function PaymentHistoryPage() {
       setLoading(false);
     }
   };
-  
+
 
   if (loading) {
     return (
@@ -44,7 +44,7 @@ export default function PaymentHistoryPage() {
     );
   }
 
-  // Calculate total spent
+  
   const totalSpent = history.reduce((sum, record) => sum + (record.paidAmount || 0), 0);
   const paidCount = history.filter(h => h.paidAmount > 0).length;
 
