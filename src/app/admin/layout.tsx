@@ -7,7 +7,7 @@ export default function AdminLayout({
 }) {
   return (
     <ProtectedRoute requireAdmin={true}>
-      {children}
+      {children} 
     </ProtectedRoute>
   );
 }
