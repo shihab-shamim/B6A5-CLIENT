@@ -24,6 +24,7 @@ export default function CreateEventPage() {
     fee: "",
     category: "Technology"
   });
+  
 
   const categories = ["Technology", "Music", "Business", "Education", "Health", "Sports", "Other"];
 
