@@ -17,7 +17,7 @@ import {
 export default function PaymentHistoryPage() {
   const [history, setHistory] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  
+
 
   useEffect(() => {
     fetchPaymentHistory();
@@ -33,6 +33,7 @@ export default function PaymentHistoryPage() {
       setLoading(false);
     }
   };
+  
 
   if (loading) {
     return (
