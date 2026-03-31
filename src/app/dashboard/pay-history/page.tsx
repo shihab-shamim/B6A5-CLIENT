@@ -55,7 +55,7 @@ export default function PaymentHistoryPage() {
         <p className="text-sm text-slate-400">View your transaction history and payment statuses.</p>
       </div>
 
-      {/* Summary Cards */}
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
          <div className="glass-card p-6 rounded-2xl border border-slate-700 flex items-center gap-4">
             <div className="w-12 h-12 bg-indigo-500/20 rounded-full flex items-center justify-center">
@@ -100,7 +100,7 @@ export default function PaymentHistoryPage() {
             {history.map((record) => (
               <div key={record.id} className="glass-card p-5 rounded-xl border border-slate-700 flex flex-col md:flex-row gap-6 relative overflow-hidden group hover:border-slate-500 transition-colors">
                 
-                {/* Status indicator line */}
+                
                 <div className={`absolute left-0 top-0 bottom-0 w-1 ${
                   record.status === 'APPROVED' ? 'bg-green-500' : 
                   record.status === 'REJECTED' ? 'bg-red-500' : 'bg-yellow-500'
